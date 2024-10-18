@@ -1,11 +1,25 @@
+
 <?php
-    
-    echo "Курсът " . "<b>" . $_POST["subject-name" ] . "</b>" . " е добавен успешно!" . "<br><br>";
-    echo "Информация за курса" . "<br>";
-    echo "Име на курса: " . $_POST["subject-name"] . "<br>";
-    echo "Преподавател: " . $_POST["lecturer"] . "<br>";
-    echo "Брой кредити: " . $_POST["credits"] . "<br>";
-    echo "Група ИД: " . $_POST["subject-type"] . "<br>";
-    echo "Описание: " . $_POST["description"] . "<br>";
+if($_SERVER["REQUEST_METHOD"]=="POST") {
+    $courseName = htmlspecialchars(($_POST['course-name']));
+    $lecturer = htmlspecialchars(($_POST['lecturer']));
+    $credits = htmlspecialchars(($_POST['credits']));
+    $group = htmlspecialchars(($_POST['group']));
+    $description = htmlspecialchars(($_POST['description']));
+
+    echo "Курсът <b>" . $courseName . "</b> е добавен успешно!<br><br>";
+
+    echo "Информация за курса:" . "<br>";
+    echo "<ul>";
+    echo "<li>Име на курса: " . $courseName . "</li>";
+    echo "<li>Преподавател: " . $lecturer . "</li>";
+    echo "<li>Брой кредити: " . $credits . "</li>";
+    echo "<li>Група: " . $group . "</li>";
+    echo "<li>Описание: " . $description . "</li>";
+    echo "</ul>";
+} 
+else {
+    echo "Invalid request method.";
+}
   
 ?>
