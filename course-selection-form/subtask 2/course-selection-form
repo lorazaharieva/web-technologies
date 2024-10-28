@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> Записване на избираема дисциплина </title>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <h2> Форма за добавяне на избираеми дисциплини</h2> 
+    <br><br>
+
+    <form id="registration">
+        <label for="course-name">Име на курс</label>
+        <br>
+        <input type="text" id="course-name" name="course-name" maxlength="150" required> 
+        <br><br>
+            
+        <label for="lecturer">Преподавател</label>
+        <br>
+        <input type="text"  id="lecturer" name="lecturer" maxlength="200" required>  
+        <br><br>
+
+        <label for="group">Група</label>
+        <br>
+        <select id="group" name="group" required>
+            <option value="">--Моля, изберете опция--</option>
+            <option value="М"> М </option>
+            <option value="ПМ"> ПМ </option>
+            <option value="ОКН"> ОКН </option>
+            <option value="ЯКН"> ЯКН </option>
+        </select>  
+        <br><br>
+
+        <label for="credits">Брой кредити</label>
+        <br>
+        <input type="number"  id="credits" name="credits" min="0" required>  
+        <br><br>
+
+        <label for="description">Описание</label>
+        <br>
+        <textarea id="description" name="description" minlength="10" rows="6" cols="30"></textarea>  
+        <br><br><br>
+        
+        <button id="btn" type="submit">Запис</button>
+    </form>
+    <div id="container"> </div>
+</body>
+</html>
+
