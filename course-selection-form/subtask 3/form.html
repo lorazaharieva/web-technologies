@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Form</title>
+    <script src="./better-form-handler.js" defer async></script>
+    <link rel="stylesheet" href="./better-style.css">
+</head>
+<body>
+    <section class="form-container">
+        <header class="form-header">
+            <h2>Форма за добавяне на избираеми дисциплини</h2>
+        </header>
+
+        <section class="form-content">
+            <form id="registration">
+                <div class="form-item">
+                    <label for="course-name">Име на курс</label>
+                    <input type="text" id="course-name" name="courseName" maxlength="150" required> 
+                </div>
+                
+                <div class="form-item">
+                    <label for="lecturer">Преподавател</label>
+                    <input type="text"  id="lecturer" name="lecturer" maxlength="200" required>  
+                </div>
+
+                <div class="form-item">
+                    <label for="group">Група</label>
+                    <select id="group" name="group" required>
+                        <option value="">--Моля, изберете опция--</option>
+                        <option value="М"> М </option>
+                        <option value="ПМ"> ПМ </option>
+                        <option value="ОКН"> ОКН </option>
+                        <option value="ЯКН"> ЯКН </option>
+                    </select> 
+                </div>
+
+                <div class="form-item">
+                    <label for="credits">Брой кредити</label>
+                    <input type="number"  id="credits" name="credits" min="0" required>  
+                </div>
+
+                <div class="form-item">
+                    <label for="description">Описание</label>  
+                    <textarea id="description" name="description" minlength="10" rows="6"></textarea>  
+                </div>
+
+                <div class="form-item">
+                    <button id="save-course-btn" type="submit">Запис на курс</button>
+                </div>                    
+            </form>
+        </section>        
+    </section>
+
+    <section class="message" id="form-message" class="form-message"></section>
+</body>
+</html>
+
