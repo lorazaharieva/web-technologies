@@ -1,0 +1,83 @@
+.form-container {
+    width: 45%;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    margin: auto;
+    margin-top: 30px;
+}
+
+.form-header {
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5px;
+
+    background-color: rgb(192, 45, 82);
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+
+label {
+    display: block;
+
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.form-content {
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+.form-content .form-item input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 7px;
+}
+
+.form-item button {
+    display: block;
+    margin: auto;
+    width: 30%;
+    margin-top: 30px;
+    padding: 10px;
+
+    background-color: rgb(192, 45, 82);
+    color: white;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+}
+
+button:hover {
+    background-color: rgb(71, 136, 58);
+}
+
+.message {
+    display: none;
+    word-wrap: break-word;
+
+    width: 40%;
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    margin: auto;
+}
+
+.color-message {
+    color: green; 
+    font-weight: bold; 
+}
+
